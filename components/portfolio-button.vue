@@ -1,21 +1,17 @@
 <template>
-  <a class="font-light border-3 hover:brightness-125 transition-all
+  <component
+      :is="componentType"
+      :type="href ? null : 'button'"
+      class="font-light border-3 hover:brightness-125 transition-all
     focus:ring-4 ring-current focus:outline-none duration-500 font-medium rounded-3xl text-lg leading-5 p-4 flex
-    flex-row items-center space-x-5.5 text-left max-w-xxs items-start animate-cursor width-full"
+    flex-row items-center space-x-5.5 text-left max-w-xxs items-start animate-cursor width-full h-full"
      :class="colors[palette]"
      :href="href"
-     v-if="href"
+     @click="clicked"
   >
     <span v-if="icon" :class="['text-4.5xl', 'w-fit', `iconoir-${icon}`]"/>
     <span>{{ message }}</span>
-  </a>
-  <button type="button" class="font-light border-3 hover:brightness-125 transition-all
-    focus:ring-4 ring-current focus:outline-none duration-500 font-medium rounded-3xl text-lg leading-5 p-4 flex
-    flex-row items-center space-x-5.5 text-left max-w-xxs items-start animate-cursor width-full"
-          :class="colors[palette]" @click="clicked" v-else >
-    <span v-if="icon" :class="['text-4.5xl', 'w-fit', `iconoir-${icon}`]"/>
-    <span>{{ message }}</span>
-  </button>
+  </component>
 </template>
 
 <script>
@@ -53,5 +49,10 @@ export default {
       }
     }
   },
+  computed: {
+    componentType() {
+      return this.href ? "a" : "button";
+    }
+  }
 }
 </script>

@@ -1,31 +1,30 @@
 <template>
-<!--  :class="[`text-${fontSize}`, `gap-x-${gapSize}`]"-->
-  <div class="socials flex flex-row items-center text-4xl gap-x-4">
-    <social-buttons href="https://github.com/404-program-not-found" icon="github">
+  <div class="socials flex flex-row items-center text-4xl justify-between w-full max-w-sm">
+    <SocialButton href="https://github.com/404-program-not-found" icon="github" aria-label="follow me on GitHub">
       <template #tooltip>
         <div>404-Program-not-found</div>
         <div class="iconoir-open-new-window"/>
       </template>
-    </social-buttons>
-    <social-buttons href="Alex123456#7890" icon="discord" :does-copy="true">
+    </SocialButton>
+    <SocialButton href="Alex123456#7890" icon="discord" :does-copy="true" aria-label="find me on Discord (click to copy)">
       <template #tooltip>
           <div>Alex123456#7890</div>
           <div class="iconoir-copy"/>
       </template>
-    </social-buttons>
-    <social-buttons href="https://dev.to/404programnotfound">
-      <devBadge width="1em" height="1em" viewBox="0 0 48 48" class="fill-current text-inherit"/>
+    </SocialButton>
+    <SocialButton href="https://dev.to/404programnotfound" aria-label="follow me on Dev.to">
+      <devBadge width="1em" height="1em" class="fill-current text-inherit"/>
       <template #tooltip>
         <div>404Programnotfound</div>
         <div class="iconoir-open-new-window"/>
       </template>
-    </social-buttons>
-    <social-buttons href="me@missingprogram.tech" icon="mail" :does-copy="true">
+    </SocialButton>
+    <SocialButton href="me@missingprogram.tech" icon="mail" :does-copy="true" aria-label="contact me via email (click to copy)">
       <template #tooltip>
           <div>me@missingprogram.tech</div>
           <div class="iconoir-copy"/>
       </template>
-    </social-buttons>
+    </SocialButton>
   </div>
 </template>
 
@@ -49,4 +48,5 @@ export default {
 
 <script setup>
 import DevBadge from "~/assets/icons/Devto.vue";
+import SocialButton from "~/components/social-button.vue";
 </script>

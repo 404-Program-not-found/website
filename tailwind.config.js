@@ -19,9 +19,13 @@ module.exports = {
                 "bkg-blue": "#171F33",
                 "secondary-gray": "#393F4D",
                 "secondary-gray-light": "#606980",
-                "secondary-blue": "#202B46",
+                "secondary-blue": {
+                    "transparent": "rgb(32,43,70, 0.8)",
+                    "DEFAULT": "#202b46"
+                },
                 "accent-blue": "#5C7CCC",
                 "text-white": "#E7F6F2",
+                "text-black": "#1A1A1A",
             },
             borderWidth: {
                 "3": "3px",
@@ -35,6 +39,8 @@ module.exports = {
             },
             fontSize: {
                 "4.5xl": "2.5rem",
+                'unset': 'unset',
+                "inherit": "inherit",
             },
             gap: {
                 "4.5": "1.125rem",
@@ -44,16 +50,18 @@ module.exports = {
             },
             keyframes: {
                 "idle-bounce": {
-                    "50%": {
-                        transform: "translateY(-4px)",
-                    },
-                    "0%, 100%": {
-                        transform: "translateY(4px)",
-                    }
+                    "0%, 100%": { transform: "translateY(0)" },
+                    "50%": { transform: "translateY(-4px)" },
                 }
             },
             gridTemplateColumns: {
                 "fluid-buttons": "repeat(auto-fit, minmax(200px, 1fr))",
+            },
+            boxShadow: {
+                "inset-fill": "inset 100px 0 0 0 rgb(0 0 0 / 0.05)"
+            },
+            inset: {
+                "unset": "unset",
             }
         },
     },

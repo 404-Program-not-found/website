@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "build": "nuxt build TAILWIND_MODE=watch",
-    "dev": "nuxt dev",
+    "dev": "nuxt dev --https --ssl-cert localhost.pem --ssl-key localhost-key.pem",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
@@ -16,6 +16,7 @@
     "tailwindcss": "^3.2.4"
   },
   "dependencies": {
+    "@vueuse/motion": "2.0.0-beta.25",
     "flowbite": "^1.5.5",
     "uuid": "^9.0.0"
   }
