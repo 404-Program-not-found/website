@@ -61,7 +61,10 @@ module.exports = {
                 "inset-fill": "inset 100px 0 0 0 rgb(0 0 0 / 0.05)"
             },
             inset: {
-                "unset": "unset",
+                unset: "unset",
+            },
+            spacing: {
+                unset: 'unset',
             }
         },
     },
