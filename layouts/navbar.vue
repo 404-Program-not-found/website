@@ -14,7 +14,7 @@
       <template v-for="navEl in linksItems">
         <NavbarLink :href="navEl.href" @mouseenter="itemMouseover($event)" @mouseleave="itemMouseout($event)"
         @focusin="itemMouseover($event)" @focusout="itemMouseout($event)" class="focus:outline-none group
-        md:hover:text-secondary-blue">
+        md:hover:text-secondary-blue md:focus:text-secondary-blue">
           <div :class="navEl.icon" class="text-xl sm:text-2xl md:text-unset
           group-hover:bg-text-white md:group-hover:bg-inherit
           px-3 py-0.5 md:p-0
@@ -34,7 +34,7 @@ export default {
   data() {
     return {
       linksItems: [
-        {href: "#home", icon: "iconoir-home", message: "Home"},
+        {href: "#", icon: "iconoir-home", message: "Home"},
         {href: "#about", icon: "iconoir-user", message: "About"},
         {href: "#projects", icon: "iconoir-report-columns", message: "Projects"},
         {href: "#code", icon: "iconoir-code", message: "Code"}

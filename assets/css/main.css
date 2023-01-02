@@ -6,10 +6,21 @@
     font-family: "Cascadia Code";
     src: url("../fonts/cascadia_code/CascadiaCode.woff2") format("woff2");
 }
+
 @font-face {
     font-family: "Cascadia Code";
     src: url("../fonts/cascadia_code/CascadiaCodeItalic.woff2") format("woff2");
     font-style: italic;
+}
+
+:root {
+    --bkg-blue: 23, 31, 51;
+    --secondary-gray: 57, 63, 77;
+    --secondary-gray-light: 96, 105, 128;
+    --secondary-blue: 32, 43, 70;
+    --accent-blue: 92, 124, 204;
+    --text-white: 231, 246, 242;
+    --text-black: 26, 26, 26;
 }
 
 body {
@@ -21,6 +32,7 @@ body {
     scrollbar-color: rgb(13, 26, 38) rgb(45, 61, 102);
     scrollbar-width: thin;
 }
+
 html, body {
     min-height: 100%;
     overflow: auto;

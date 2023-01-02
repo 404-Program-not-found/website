@@ -16,16 +16,16 @@ module.exports = {
         },
         extend: {
             colors: {
-                "bkg-blue": "#171F33",
-                "secondary-gray": "#393F4D",
-                "secondary-gray-light": "#606980",
+                "bkg-blue": "rgb(var(--bkg-blue))",
+                "secondary-gray": "rgb(var(--secondary-gray))",
+                "secondary-gray-light": "rgb(var(--secondary-gray-light))",
                 "secondary-blue": {
-                    "transparent": "rgb(32,43,70, 0.8)",
-                    "DEFAULT": "#202b46"
+                    "transparent": "rgba(var(--secondary-blue), 0.8)",
+                    "DEFAULT": "rgb(var(--secondary-blue))",
                 },
-                "accent-blue": "#5C7CCC",
-                "text-white": "#E7F6F2",
-                "text-black": "#1A1A1A",
+                "accent-blue": "rgb(var(--accent-blue))",
+                "text-white": "rgb(var(--text-white))",
+                "text-black": "rgb(var(--text-black))",
             },
             borderWidth: {
                 "3": "3px",
@@ -65,6 +65,9 @@ module.exports = {
             },
             spacing: {
                 unset: 'unset',
+            },
+            transitionProperty: {
+                'focus': 'ring background-color border-color border-radius',
             }
         },
     },
