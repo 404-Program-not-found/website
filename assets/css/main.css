@@ -31,6 +31,7 @@ body {
     /* for firefox users */
     scrollbar-color: rgb(13, 26, 38) rgb(45, 61, 102);
     scrollbar-width: thin;
+    overflow-x: hidden;
 }
 
 html, body {

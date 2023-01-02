@@ -8,17 +8,16 @@
       role="navigation"
       tabindex="-1">
     <div class="hidden md:block overlay absolute w-24 bg-text-white -z-10 transition-all duration-300 opacity-0
-    rounded-full"
-         ref="overlay" tabindex="-1"></div>
+    rounded-full" ref="overlay" tabindex="-1"></div>
     <div class="h-fit flex flex-row items-center md:gap-x-4 justify-around w-full md:w-fit" ref="links">
       <template v-for="navEl in linksItems">
         <NavbarLink :href="navEl.href" @mouseenter="itemMouseover($event)" @mouseleave="itemMouseout($event)"
-        @focusin="itemMouseover($event)" @focusout="itemMouseout($event)" class="focus:outline-none group
-        md:hover:text-secondary-blue md:focus:text-secondary-blue">
+                    :same-page="navEl.samePage"
+                   class="group rounded-full focus-visible:ring-2 focus-visible:ring-text-white focus:outline-none">
           <div :class="navEl.icon" class="text-xl sm:text-2xl md:text-unset
           group-hover:bg-text-white md:group-hover:bg-inherit
           px-3 py-0.5 md:p-0
-          group-hover:text-secondary-blue md:group-hover:text-unset
+          group-hover:text-secondary-blue md:group-hover:text-inherit
           rounded-full md:rounded-none
           transition-colors duration-300"/>
           <div class="transition-colors duration-300">{{ navEl.message }}</div>
@@ -34,12 +33,11 @@ export default {
   data() {
     return {
       linksItems: [
-        {href: "#", icon: "iconoir-home", message: "Home"},
-        {href: "#about", icon: "iconoir-user", message: "About"},
-        {href: "#projects", icon: "iconoir-report-columns", message: "Projects"},
-        {href: "#code", icon: "iconoir-code", message: "Code"}
+        {href: "#", icon: "iconoir-home", message: "Home", samePage: false},
+        {href: "#about", icon: "iconoir-user", message: "About", samePage: true},
+        {href: "#projects", icon: "iconoir-report-columns", message: "Projects", samePage: true},
+        {href: "#code", icon: "iconoir-code", message: "Code", samePage: true}
       ],
-      overlayPadding: 10,
       isAtTop: true,
     };
   },
@@ -52,17 +50,32 @@ export default {
   },
   methods: {
     itemMouseover(event) {
+      this.clearActive()
       const overlay = this.$refs.overlay;
       const link = event.target;
       overlay.style.opacity = 1;
-      overlay.style.width = `${link.offsetWidth + this.overlayPadding}px`;
-      overlay.style.left = `${link.offsetLeft - this.overlayPadding / 2}px`;
-      overlay.style.height = `${link.offsetHeight - this.overlayPadding}px`;
+      link.classList.add("active");
+      overlay.style.width = `${link.offsetWidth}px`;
+      overlay.style.left = `${link.offsetLeft}px`;
+      overlay.style.height = `${link.offsetHeight}px`;
     },
     itemMouseout(event) {
       const overlay = this.$refs.overlay;
+      this.clearActive()
       overlay.style.opacity = 0;
+    },
+    clearActive() {
+      const activeLinks = this.$refs.links.querySelectorAll(".active");
+      activeLinks.forEach(el => el.classList.remove("active"));
     }
   }
 }
 </script>
+
+<style>
+@screen md {
+  .active {
+    @apply text-secondary-blue;
+  }
+}
+</style>

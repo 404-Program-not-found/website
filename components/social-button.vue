@@ -8,7 +8,7 @@
       'rounded-2xl',
       'transition-all duration-300',
       'hover:bg-accent-blue hover:text-text-white',
-      'focus:outline-none focus:ring-4 focus:ring-text-white focus:ring-opacity-50 focus:bg-accent-blue focus:text-text-white',
+      'focus:outline-none focus:ring-4 focus:ring-text-white focus:bg-accent-blue focus:text-text-white',
       'text-accent-blue',
       'p-2',
       icon ? `iconoir-${icon}`: '',
