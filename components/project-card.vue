@@ -1,9 +1,12 @@
 <template>
-  <div class="rounded-2xl group" :style="{background: backgroundStyle}" @click="url">
+  <div class="rounded-2xl group aspect-card relative" :style="{ background: backgroundStyle }" @click="url">
     <component :is="url ? 'a' : 'div'" class="w-full h-full p-6 flex flex-col justify-between">
       <div class="gap-1 mb-auto max-w-[185px]">
-        <h4 class="text-4xl font-bold">{{heading}}</h4>
-        <p class="text-xl text-secondary-gray-light">{{subheading}}</p>
+        <h4 class="text-4xl font-bold">{{ heading }}</h4>
+        <p class="text-xl text-secondary-gray-light">{{ subheading }}</p>
+      </div>
+      <div class="iconoir-code-brackets-square absolute left-1/2 -translate-y-1/2 -translate-x-1/2  top-1/2 text-9xl"
+        v-if="!backgroundImage">
       </div>
       <div class="flex flex-row content-between text-text-white hidden group-hover:inline-block" v-if="technologies">
         <template v-for="tech in technologies">

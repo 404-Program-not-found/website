@@ -68,6 +68,9 @@ module.exports = {
             },
             transitionProperty: {
                 'focus': 'ring background-color border-color border-radius',
+            },
+            aspectRatio: {
+                'card': '2 / 3',
             }
         },
     },
