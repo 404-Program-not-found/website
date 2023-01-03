@@ -20,7 +20,6 @@
 </template>
 
 <script>
-import { useMotion } from "@vueuse/motion";
 export default {
   name: "hero",
   mounted() {

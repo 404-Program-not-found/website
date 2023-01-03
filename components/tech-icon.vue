@@ -9,6 +9,8 @@ import Typescript from "assets/icons/Typescript.vue";
 import Python from "assets/icons/Python.vue";
 import Kotlin from "assets/icons/Kotlin.vue";
 import Electron from "assets/icons/Electron.vue";
+import Capacitor from "assets/icons/Capacitor.vue";
+import Nuxt from "assets/icons/Nuxt.vue";
 
 export default {
   name: "tech-icon",
@@ -26,6 +28,8 @@ export default {
       "python": shallowRef(Python),
       "kotlin": shallowRef(Kotlin),
       "electron": shallowRef(Electron),
+      "capacitor": shallowRef(Capacitor),
+      "nuxt": shallowRef(Nuxt),
     }
     return {
       iconMap,
