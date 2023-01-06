@@ -6,6 +6,9 @@ This readme might be updated in the future to look nicer.
 
 All source code, unless otherwise stated, is licensed under [AGPL-3.0](./LICENSE.md).
 
+Any images, video, or other media are all rights reserved, except the `./assets/icons` directory, which belong to
+their respective owners.
+
 ## To compile and run locally
 1. Clone the repository
 2. Install dependencies with `yarn install`
