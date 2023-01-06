@@ -47,24 +47,37 @@ module.exports = {
             },
             animation: {
                 "idle-bounce": "idle-bounce 4s ease-in-out infinite",
+                "rotation-pulse": "rotate-pulse ease-in-out 10s infinite",
+                "blur-pulse": "blur-pulse ease-in-out 10s infinite",
             },
             keyframes: {
                 "idle-bounce": {
                     "0%, 100%": { transform: "translateY(0)" },
                     "50%": { transform: "translateY(-4px)" },
+                },
+                "rotate-pulse": {
+                    "0%": { transform: "rotate(0deg)", filter:"blur(40px)" },
+                    "50%": { transform: "rotate(180deg)", filter:"blur(50px)" },
+                    "100%": { transform: "rotate(360deg)", filter:"blur(40px)" },
+                },
+                "blur-pulse": {
+                    "0%": { filter:"blur(60px)" },
+                    "50%": { filter:"blur(70px)" },
+                    "100%": { filter:"blur(60px)" },
                 }
             },
             gridTemplateColumns: {
                 "fluid-buttons": "repeat(auto-fit, minmax(200px, 1fr))",
             },
             boxShadow: {
-                "inset-fill": "inset 100px 0 0 0 rgb(0 0 0 / 0.05)"
+                "inset-fill-100": "inset 100px 0 0 0 rgb(0 0 0 / 0.05)"
             },
             inset: {
                 unset: "unset",
             },
             spacing: {
                 unset: 'unset',
+                "4.5": "1.125rem",
             },
             transitionProperty: {
                 'focus': 'ring background-color border-color border-radius',

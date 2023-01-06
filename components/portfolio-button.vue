@@ -4,7 +4,7 @@
       :type="href ? null : 'button'"
       class="font-light border-3 hover:brightness-125 transition-all
     focus:ring-4 ring-current focus:outline-none duration-500 font-medium rounded-3xl text-lg leading-5 p-4 flex
-    flex-row items-center space-x-5.5 text-left max-w-xxs items-start animate-cursor width-full h-full"
+    flex-row items-center gap-x-3 text-left max-w-xxs items-start animate-cursor width-full h-full"
      :class="colors[palette]"
      :href="href"
      @click="clicked"

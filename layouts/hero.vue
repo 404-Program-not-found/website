@@ -14,8 +14,13 @@
         <span class="flex justify-center md:inline-block grow"><Socials ref="social-row"/></span>
       </div>
     </div>
-    <img src="@/assets/images/pfp.png" alt="Profile Picture" class="rounded-[50%] max-w-sm min-w-0 h-auto w-full animate-idle-bounce
-    hover:rounded-[20%] pfp hover:animate-none" ref="pfp">
+    <div class="relative rounded-[50%] md:hover:rounded-[20%] max-w-sm min-w-0 h-auto w-full pfp animate-idle-bounc
+    md:hover:animate-none group" ref="pfp">
+      <div class="absolute max-w-full max-h-full bg-gradient-to-r from-sky-500 to-green-400
+      -inset-0.5 rounded-[50%] md:group-hover:rounded-[20%] opacity-75 group-hover:opacity-100 pfp-border blur-xl
+      animate-rotation-pulse md:group-hover:animate-blur-pulse"/>
+      <img src="@/assets/images/pfp.png" alt="Profile Picture" class="rounded-[50%] pfp md:group-hover:rounded-[20%] relative" >
+    </div>
   </section>
 </template>
 
@@ -23,15 +28,17 @@
 export default {
   name: "hero",
   mounted() {
-    VanillaTilt.init(this.$refs.pfp, {
-      max: 8,
-      speed: 300,
-      scale: 1.1,
-      glare: true,
-      reverse: true,
-      transition: true,
-      "max-glare": 1,
-    });
+    if (window.innerWidth > 768) {
+      VanillaTilt.init(this.$refs.pfp, {
+        max: 8,
+        speed: 300,
+        scale: 1.1,
+        glare: true,
+        reverse: true,
+        transition: true,
+        "max-glare": 0.3,
+      });
+    }
   }
 }
 </script>
@@ -39,5 +46,12 @@ export default {
 <style scoped>
 .pfp {
   transition: border-radius 0.3s ease-in-out;
+}
+
+.pfp-border {
+  transition: border-radius 0.3s ease-in-out, opacity 1s ease-in-out;
+}
+.pfp-border:hover {
+  transition: border-radius 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 </style>

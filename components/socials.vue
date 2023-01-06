@@ -19,7 +19,7 @@
         <div class="iconoir-open-new-window"/>
       </template>
     </SocialButton>
-    <SocialButton href="me@missingprogram.tech" icon="mail" :does-copy="true" aria-label="contact me via email (click to copy)">
+    <SocialButton href="hello@missingprogram.me" icon="mail" :does-copy="true" aria-label="contact me via email (click to copy)">
       <template #tooltip>
           <div>me@missingprogram.tech</div>
           <div class="iconoir-copy"/>

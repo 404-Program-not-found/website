@@ -1,5 +1,5 @@
 <template>
-  <h3 class="flex flex-row text-4xl font-bold">
+  <h3 class="flex flex-row text-3xl md:text-4xl font-bold">
     <span class="text-accent-blue">{{ section }}</span>
     <span class="text-accent-blue" aria-hidden="true">//</span>
     <span class="text-text-white">{{ title }}</span>

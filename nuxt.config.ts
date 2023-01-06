@@ -8,4 +8,14 @@ export default defineNuxtConfig({
             autoprefixer: {},
         },
     },
+    runtimeConfig: {
+        githubSecret: process.env.GITHUB_SECRET,
+    },
+    vite: {
+        resolve: {
+            alias: {
+                // 'node-fetch': 'isomorphic-fetch',
+            }
+        }
+    }
 })

@@ -17,7 +17,9 @@
     "tailwindcss": "^3.2.4"
   },
   "dependencies": {
+    "@octokit/core": "^4.1.0",
     "flowbite": "^1.5.5",
+    "isomorphic-fetch": "^3.0.0",
     "uuid": "^9.0.0"
   }
 }

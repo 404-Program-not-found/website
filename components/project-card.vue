@@ -1,27 +1,27 @@
 <template>
-  <div
-      class="aspect-square sm:aspect-card relative hover:scale-105
-      transition-all duration-200 group card before:transition-all before:duration-200 before:rounded-3xl"
-      @click="url" @mouseenter="hoverEnter" @mouseleave="hoverLeave">
-    <component :is="url ? 'a' : 'div'" class="w-full h-full p-6 flex flex-col justify-between" :href="url">
+  <a :href="url ? url : 'javascript:;'"
+      class="aspect-square sm:aspect-card relative focus:outline focus-visible:scale-105
+      focus-visible:outline-4 focus-visible:outline-text-white rounded-3xl
+      transition-all duration-500 group card before:transition-all before:duration-500 before:rounded-3xl before:brightness-75 md:before:filter-none"
+      @click="url" @mouseenter="hoverEnter" @mouseleave="hoverLeave" @focusin="hoverEnter" @focusout="hoverLeave">
+    <div class="iconoir-code-brackets-square noBkg absolute left-1/2 -translate-y-1/2 -translate-x-1/2 top-1/2
+      text-9xl transform duration-500 before:brightness-75 md:before:filter-none" v-if="!backgroundImage"/>
+    <div class="w-full h-full p-6 flex flex-col justify-between">
       <div class="flex flex-row w-full justify-between">
         <div class="gap-1 mb-auto max-w-[185px] text-xl">
           <h4 class="text-4xl font-bold">{{ heading }}</h4>
           <p class="text-xl sm:text-secondary-gray-light group-hover:text-inherit transition-colors duration-500 font-light">{{ subheading }}</p>
         </div>
-        <div v-if="url" class="iconoir-open-new-window text-4xl opacity-0 -translate-y-5 transform duration-500" ref="externalIcon"></div>
+        <div v-if="url" class="iconoir-open-new-window text-4xl md:opacity-0 md:-translate-y-5 transform duration-500" ref="externalIcon"></div>
       </div>
-      <div class="iconoir-code-brackets-square noBkg absolute left-1/2 -translate-y-1/2 -translate-x-1/2 top-1/2
-      text-9xl transform duration-200"
-           v-if="!backgroundImage">
-      </div>
-        <ul class="flex flex-row justify-center gap-5 text-text-white text-4xl list-none" v-if="technologies" ref="techs">
-          <li v-for="(tech, index) in technologies" :key="tech" :data-index="index" class="opacity-0 transform duration-500 translate-y-5">
+        <ul class="flex flex-row flex-wrap justify-center gap-y-2 gap-x-5 text-text-white text-4xl list-none" v-if="technologies" ref="techs">
+          <li v-for="(tech, index) in technologies" :key="tech" :data-index="index" class="md:opacity-0 transform
+          duration-500 md:translate-y-5">
             <TechIcon :tech="tech"></TechIcon>
           </li>
         </ul>
-    </component>
-  </div>
+    </div>
+  </a>
 </template>
 
 <script>
@@ -105,7 +105,7 @@ export default {
       el.style.opacity = null;
       el.style.transform = null;
     }
-  }
+  },
 }
 </script>
 
@@ -122,11 +122,21 @@ export default {
   width: 100%;
   height: 100%;
 }
+
+@media (hover: hover) and (pointer: fine) {
+  .card:hover {
+    transform: scale(1.05);
+  }
+  .card:hover::before {
+    filter: brightness(0.7)
+  }
+}
+
 .card * {
   z-index: 1;
 }
 
 .card.hovered::before, .card.hovered .noBkg {
-  filter: saturate(0) contrast(1.1) blur(10px);
+  filter: saturate(0) contrast(1.1) blur(10px) brightness(1);
 }
 </style>

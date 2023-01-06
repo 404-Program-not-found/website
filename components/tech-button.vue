@@ -1,8 +1,8 @@
 <template>
   <a v-if="getTech" :class="[getTech.class]" :href="getTech.href"
      class="border-3 border-text-white p-4 text-5xl h-fit w-fit relative block rounded-[25%]
-     hover:shadow-inset-fill hover:shadow-secondary-gray-light hover:text-text-white ring-current
-     focus:outline-none focus:shadow-inset-fill focus:shadow-secondary-gray-light focus:text-text-white focus:ring-2
+     hover:shadow-inset-fill-100 hover:shadow-secondary-gray-light hover:text-text-white ring-current
+     focus:outline-none focus:shadow-inset-fill-100 focus:shadow-secondary-gray-light focus:text-text-white focus:ring-2
      transition duration-500">
     <span class="hide-accessible">{{ getTech.name }}</span>
     <TechIcon :tech="getTech.name.toLowerCase()"></TechIcon>
@@ -14,12 +14,6 @@
 </script>
 
 <script>
-import VueIcon from 'assets/icons/vue.vue';
-import Electron from "assets/icons/Electron.vue";
-import Kotlin from "assets/icons/Kotlin.vue";
-import Javascript from "assets/icons/Javascript.vue";
-import Typescript from "assets/icons/Typescript.vue";
-import Python from "assets/icons/Python.vue";
 
 export default {
   name: "tech-button.vue",

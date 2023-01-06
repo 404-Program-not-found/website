@@ -3,19 +3,20 @@
     <SegmentHeader section="Work" id="projects" title="Projects"/>
     <div class="grid grid-cols-1 sm:grid-cols-2 grid-rows-2 md:grid-rows-1 md:grid-cols-3 min-w-full gap-3 md:gap-5"
          ref="projects">
-      <ProjectCard/>
-      <ProjectCard :technologies="['javascript', 'typescript', 'vue', 'capacitor', 'nuxt']"
+      <LazyProjectCard :technologies="['javascript', 'typescript', 'nuxt', 'vue']"
+                       :backgroundImage="MissingProgram" heading="Portfolio" url="https://missingprogram.me"
+                       subheading="This very website"/>
+      <LazyProjectCard :technologies="['javascript', 'nuxt', 'vue', 'capacitor']"
                    :backgroundImage="VueTubePromo" heading="VueTube" url="https://vuetube.app"
                    subheading="Video Watching Frontend"/>
-      <ProjectCard :technologies="['javascript', 'typescript', 'vue', 'capacitor', 'nuxt']"
-                   :backgroundImage="VueTubePromo" heading="VueTube" url="https://vuetube.app"
-                   subheading="Video Watching Frontend"/>
+      <LazyProjectCard/>
     </div>
   </section>
 </template>
 
 <script setup>
 import VueTubePromo from "~/assets/images/VueTube-promo.png";
+import MissingProgram from "~/assets/images/missingprogram.png";
 </script>
 
 <script>
@@ -25,6 +26,9 @@ export default {
     const projects = this.$refs.projects.children;
     for (let i = 0; i < projects.length; i++) {
       projects[i].addEventListener("mouseenter", () => {
+        if (window.matchMedia("(hover: none)").matches) {
+          return;
+        }
         for (let j = 0; j < projects.length; j++) {
           if (i !== j) {
             projects[j].classList.add("hovered");
