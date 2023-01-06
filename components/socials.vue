@@ -21,7 +21,7 @@
     </SocialButton>
     <SocialButton href="hello@missingprogram.me" icon="mail" :does-copy="true" aria-label="contact me via email (click to copy)">
       <template #tooltip>
-          <div>me@missingprogram.tech</div>
+          <div>hello@missingprogram.me</div>
           <div class="iconoir-copy"/>
       </template>
     </SocialButton>
