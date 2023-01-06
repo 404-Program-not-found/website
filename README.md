@@ -1,42 +1,13 @@
-# Nuxt 3 Minimal Starter
+# missingprogram.me
+This is the source code for [missingprogram.me](https://missingprogram.me), a personal portfolio site I made as a side
+project. It is built using [Nuxt.js](https://nuxtjs.org/), a Vue.js framework, and hosted on [Cloudflare Pages](https://pages.cloudflare.com/).
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+This readme might be updated in the future to look nicer. 
 
-## Setup
+All source code, unless otherwise stated, is licensed under [AGPL-3.0](./LICENSE.md).
 
-Make sure to install the dependencies:
-
-```bash
-# yarn
-yarn install
-
-# npm
-npm install
-
-# pnpm
-pnpm install --shamefully-hoist
-```
-
-## Development Server
-
-Start the development server on http://localhost:3000
-
-```bash
-npm run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-npm run build
-```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## To compile and run locally
+1. Clone the repository
+2. Install dependencies with `yarn install`
+3. Run the development server with `yarn dev`
+4. Navigate to `localhost:3000` in your browser
