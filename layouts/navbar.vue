@@ -36,7 +36,7 @@ export default {
         {href: "#", icon: "iconoir-home", message: "Home", samePage: false},
         {href: "#about", icon: "iconoir-user", message: "About", samePage: true},
         {href: "#projects", icon: "iconoir-report-columns", message: "Projects", samePage: true},
-        {href: "#code", icon: "iconoir-code", message: "Code", samePage: true}
+        {href: "#codeRepos", icon: "iconoir-code", message: "Code", samePage: true}
       ],
       isAtTop: true,
     };

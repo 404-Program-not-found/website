@@ -9,7 +9,7 @@
     <div class="w-full h-full p-6 flex flex-col justify-between">
       <div class="flex flex-row w-full justify-between">
         <div class="gap-1 mb-auto max-w-[185px] text-xl">
-          <h4 class="text-4xl font-bold">{{ heading }}</h4>
+          <h4 class="text-4xl font-bold break-words">{{ heading }}</h4>
           <p class="text-xl sm:text-secondary-gray-light group-hover:text-inherit transition-colors duration-500 font-light">{{ subheading }}</p>
         </div>
         <div v-if="url" class="iconoir-open-new-window text-4xl md:opacity-0 md:-translate-y-5 transform duration-500" ref="externalIcon"></div>
