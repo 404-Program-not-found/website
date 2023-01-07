@@ -5,7 +5,10 @@
       <TypingTitle :messages="['Hello World!', 'ハローワールド！', '你好，世界！' ]" id="home" aria-hidden="true"/>
       <h2 class="text-2xl">Developer, makes stuff for the Internet sometimes.</h2>
       <div class="grid grid-cols-fluid-buttons gap-x-9 gap-y-3 place-items-center">
-        <PortfolioButton message="Explore my work" icon="code"/>
+        <PortfolioButton message="Explore my work" icon="code" :clicked="() => {
+          const element = document.getElementById('#projects')
+          element.scrollIntoView({behavior: 'smooth'});
+        }"/>
         <PortfolioButton message="Support me on ko-fi" icon="coffee-cup" palette="gray-light"
                          href="https://ko-fi.com/404programnotfound"/>
       </div>
@@ -19,7 +22,8 @@
       <div class="absolute max-w-full max-h-full bg-gradient-to-r from-sky-500 to-green-400
       -inset-0.5 rounded-[50%] md:group-hover:rounded-[20%] opacity-75 group-hover:opacity-100 pfp-border blur-xl
       animate-rotation-pulse md:group-hover:animate-blur-pulse"/>
-      <img src="@/assets/images/pfp.png" alt="Profile Picture" class="rounded-[50%] pfp md:group-hover:rounded-[20%] relative" >
+      <img src="@/assets/images/pfp.png" alt="Profile Picture"
+           class="rounded-[50%] pfp md:group-hover:rounded-[20%] relative">
     </div>
   </section>
 </template>
@@ -51,6 +55,7 @@ export default {
 .pfp-border {
   transition: border-radius 0.3s ease-in-out, opacity 1s ease-in-out;
 }
+
 .pfp-border:hover {
   transition: border-radius 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
