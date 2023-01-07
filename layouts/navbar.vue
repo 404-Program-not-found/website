@@ -33,10 +33,10 @@ export default {
   data() {
     return {
       linksItems: [
-        {href: "#", icon: "iconoir-home", message: "Home", samePage: false},
-        {href: "#about", icon: "iconoir-user", message: "About", samePage: true},
-        {href: "#projects", icon: "iconoir-report-columns", message: "Projects", samePage: true},
-        {href: "#codeRepos", icon: "iconoir-code", message: "Code", samePage: true}
+        {href: "#", icon: "iconoir-home", message: "Home"},
+        {href: "#about", icon: "iconoir-user", message: "About"},
+        {href: "#projects", icon: "iconoir-report-columns", message: "Projects"},
+        {href: "#codeRepos", icon: "iconoir-code", message: "Code"}
       ],
       isAtTop: true,
     };

@@ -13,13 +13,11 @@ export default {
       type: String,
       required: true,
     },
-    samePage: {
-      type: Boolean,
-      required: false,
-      default: false,
-    },
   },
   computed: {
+    samePage() {
+      return this.href.startsWith("#") && this.href.length > 1;
+    },
     samePageClick() {
       return this.samePage ? this.navigate : null;
     },
