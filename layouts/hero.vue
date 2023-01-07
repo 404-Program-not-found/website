@@ -6,7 +6,7 @@
       <h2 class="text-2xl">Developer, makes stuff for the Internet sometimes.</h2>
       <div class="grid grid-cols-fluid-buttons gap-x-9 gap-y-3 place-items-center">
         <PortfolioButton message="Explore my work" icon="code" :clicked="() => {
-          const element = document.getElementById('#projects')
+          const element = document.getElementById('projects')
           element.scrollIntoView({behavior: 'smooth'});
         }"/>
         <PortfolioButton message="Support me on ko-fi" icon="coffee-cup" palette="gray-light"
