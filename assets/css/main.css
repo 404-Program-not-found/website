@@ -44,6 +44,7 @@ html, body {
     min-height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
+    scroll-padding-top: 2rem;
 }
 
 html {
@@ -79,6 +80,7 @@ body::-webkit-scrollbar-thumb {
 @media (min-width: 768px) {
     html {
         font-size: 1.05rem;
+        scroll-padding-top: 5em;
     }
 }
 
