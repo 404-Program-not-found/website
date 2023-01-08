@@ -3,7 +3,7 @@
     <SegmentHeader section="Work" id="projects" title="Projects"/>
     <div class="grid grid-cols-1 sm:grid-cols-2 grid-rows-2 md:grid-rows-1 md:grid-cols-3 min-w-full gap-3 md:gap-5"
          ref="projects">
-      <LazyProjectCard :technologies="['javascript', 'typescript', 'nuxt', 'vue']"
+      <LazyProjectCard :technologies="['javascript', 'tailwind', 'nuxt', 'vue']"
                        :backgroundImage="MissingProgram" heading="Portfolio" url="https://missingprogram.me"
                        subheading="This very website"/>
       <LazyProjectCard :technologies="['javascript', 'nuxt', 'vue', 'capacitor']"
