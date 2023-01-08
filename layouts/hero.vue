@@ -14,7 +14,7 @@
         <span class="flex justify-center md:inline-block grow"><Socials ref="social-row"/></span>
       </div>
     </div>
-    <div class="relative rounded-[50%] md:hover:rounded-[20%] max-w-sm min-w-0 h-auto w-full pfp animate-idle-bounc
+    <div class="relative rounded-[50%] md:hover:rounded-[20%] max-w-sm min-w-0 h-auto w-full pfp animate-idle-bounce
     md:hover:animate-none group" ref="pfp">
       <div class="absolute max-w-full max-h-full bg-gradient-to-r from-sky-500 to-green-400
       -inset-0.5 rounded-[50%] md:group-hover:rounded-[20%] opacity-75 group-hover:opacity-100 pfp-border blur-xl
