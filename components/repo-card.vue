@@ -24,7 +24,7 @@
         {{ data.repository.primaryLanguage.name }}
       </div>
       <div class="flex flex-row gap-x-1.5 items-center">
-        <span class="iconoir-star-outline"></span>
+        <span class="iconoir-star"></span>
         {{ abbreviateNum(data.repository.stargazerCount) }}
       </div>
       <div class="flex flex-row gap-x-1.5 items-center">
